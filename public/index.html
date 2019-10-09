@@ -21,7 +21,8 @@
 
       div.appendChild(document.createTextNode('Initializing...'));
 
-      var preinitElement = div.appendChild(document.createTextNode('Click Me (post init)'));
+      var preinitElement = div.appendChild(document.createElement("BUTTON"));
+      preinitElement.innerHTML = "Click Me (pre init)"
       preinitElement.id = "preinit"
 
       var ldclient = LDClient.initialize('5cf931b3826cc1075b81970e', user);
@@ -33,7 +34,9 @@
       }
 
       ldclient.on('ready', ()=>{
-        var postinitElement = div.appendChild(document.createTextNode('Click Me (post init)'));
+
+      var preinitElement = div.appendChild(document.createElement("BUTTON"));
+        postinitElement.innerHTML = "Click Me (post init)"
         postinitElement.id = "postinit"
         render()
       });

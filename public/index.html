@@ -21,7 +21,7 @@
 
       div.appendChild(document.createTextNode('Initializing...'));
 
-      var preinitElement = div.appendChild(document.createElement("BUTTON"));
+      var preinitElement = div.appendChild(document.createElement("PREINIT"));
       preinitElement.innerHTML = "Click Me (pre init)"
       preinitElement.id = "preinit"
 
@@ -35,7 +35,7 @@
 
       ldclient.on('ready', ()=>{
 
-      var preinitElement = div.appendChild(document.createElement("BUTTON"));
+      var postinitElement = div.appendChild(document.createElement("POSTINIT"));
         postinitElement.innerHTML = "Click Me (post init)"
         postinitElement.id = "postinit"
         render()
